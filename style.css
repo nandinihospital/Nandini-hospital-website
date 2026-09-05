@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #087f8c;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+nav {
+    background: #055d66;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: white;
+}
+
+.hero h2 {
+    font-size: 38px;
+    color: #087f8c;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: #087f8c;
+    color: white;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    opacity: 0.85;
+}
+
+.whatsapp {
+    background: #25d366;
+}
+
+section {
+    padding: 55px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: #087f8c;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+section p {
+    max-width: 800px;
+    margin: 8px auto;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #087f8c;
+    margin-bottom: 10px;
+}
+
+.doctor {
+    background: white;
+    max-width: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.doctor h3 {
+    color: #087f8c;
+    font-size: 24px;
+}
+
+#contact {
+    background: #e8f6f8;
+}
+
+footer {
+    background: #055d66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    width: 90%;
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 25px auto;
+    display: block;
+}
+
+.doctor img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.call-button,
+.whatsapp-button {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+.call-button {
+    background: #087f8c;
+}
+
+.whatsapp-button {
+    background: #25d366;
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: 25px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    display: block;
+}
+
+.appointment-form {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.appointment-form input,
+.appointment-form select,
+.appointment-form textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.appointment-form button {
+    width: 100%;
+    padding: 14px;
+    background: #087f8c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.appointment-form button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 7px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .hero img {
+        width: 100%;
+        height: 250px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .doctor {
+        width: 100%;
+    }
+
+    .appointment-form {
+        padding: 20px;
+    }
+
+    .floating-buttons {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .call-button,
+    .whatsapp-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .map-container {
+        width: 100%;
+    }
+
+}
+ 
+.hospital-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.hospital-header img {
+    width: 110px;
+    height: 110px;
+}
+
+.hospital-header h1 {
+    font-size: 28px;
+}
+
+.hospital-header p {
+    font-size: 14px;
+}
+
+/* =========================
+   HOSPITAL HEADER
+========================= */
+
+.hospital-header {
+    width: 100%;
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    padding: 25px 30px;
+
+    background: white;
+}
+
+/* Logo Box */
+
+.logo-box {
+    width: 260px;
+    height: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+/* BIG LOGO */
+
+.logo-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+/* Hospital Name */
+
+.hospital-title h1 {
+    color: #087f8c;
+
+    font-size: 46px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin: 0 0 8px 0;
+}
+
+.hospital-title p {
+    color: #555;
+
+    font-size: 19px;
+
+    margin: 0;
+}
+
+.hospital-header h1 {
+    color: #087f8c;
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hospital-header p {
+    color: #555;
+    font-size:18px;
+}
+
+.emergency {
+    text-align: center;
+    padding: 45px 20px;
+    background: #ffe9e9;
+}
+
+.emergency h2 {
+    color: #c62828;
+    margin-bottom: 10px;
+}
+
+.emergency p {
+    margin-bottom: 20px;
+}
+
+.emergency-button {
+    display: inline-block;
+    background: #c62828;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 160px;
+    }
+
+}
+.section-subtitle {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.doctor-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.doctor-card {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+.doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.16);
+}
+
+.doctor-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 5px solid #e8f6f8;
+}
+
+.doctor-card h3 {
+    color: #087f8c;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.doctor-speciality {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.doctor-card .button {
+    margin-top: 10px;
+    font-size: 14px;
+}
+#doctors {
+    background: #f7fbfc;
+}
+
+#doctors h2 {
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #666;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.doctor-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.doctor-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    transition: all 0.3s ease;
+    border-top: 4px solid #087f8c;
+}
+
+.doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.16);
+}
+
+.doctor-card img {
+    width: 155px;
+    height: 155px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 5px solid #e8f6f8;
+}
+
+.doctor-card h3 {
+    color: #087f8c;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.doctor-qualification {
+    color: #333;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.doctor-speciality {
+    color: #555;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 42px;
+}
+
+.doctor-card .button {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   MOBILE HEADER
+========================= */
+
+@media (max-width: 768px) {
+
+    .hospital-header {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 20px 15px;
+
+        text-align: center;
+    }
+
+    .logo-box {
+        width: 220px;
+        height: 170px;
+    }
+
+    .hospital-title h1 {
+        font-size: 30px;
+    }
+
+    .hospital-title p {
+        font-size: 15px;
+    }
+}
+
+h1 {
+    color: #D4AF37;
+}
+
+.welcome-title {
+    color: #D4AF37 !important;
+}
