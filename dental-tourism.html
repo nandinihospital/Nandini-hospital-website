@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,6 +18,7 @@
       background: #f8f8f8;
     }
 
+    /* MAIN HEADING */
     .hero {
       background: linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
       url('newhospital.png') center/cover;
@@ -65,9 +67,10 @@
       color: #D4AF37;
     }
 
+    /* DOCTOR SECTION */
     .doctor {
       background: white;
-      padding: 30px;
+      padding: 35px 30px;
       border-radius: 12px;
       text-align: center;
       margin-top: 30px;
@@ -80,18 +83,25 @@
       height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      margin: 0 auto 15px auto;
+      margin: 0 auto 20px auto;
     }
 
     .doctor h2 {
       color: #D4AF37;
-      margin-bottom: 10px;
+      margin: 5px 0 5px 0;
     }
 
     .doctor h3 {
       color: #9b7b25;
+      margin: 5px 0 10px 0;
     }
 
+    .doctor p {
+      margin: 8px auto;
+      max-width: 800px;
+    }
+
+    /* CTA */
     .cta {
       background: #9b7b25;
       color: white;
@@ -110,6 +120,7 @@
       font-weight: bold;
     }
 
+    /* FOOTER */
     footer {
       background: #222;
       color: white;
@@ -117,146 +128,199 @@
       padding: 25px;
     }
   </style>
+
 </head>
 
 <body>
 
+  <!-- HERO -->
+
   <section class="hero">
-    <h1>Dental Tourism in India</h1>
+
+```
+<h1>Dental Tourism in India</h1>
+
+<p>
+  Quality Dental Care with Personalized Treatment at Nandini Hospital, Narwana
+</p>
+```
+
+  </section>
+
+  <!-- DENTAL TREATMENTS -->
+
+  <section class="container">
+
+```
+<h2>Our Dental Treatments</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <h3>Dental Implants</h3>
     <p>
-      Quality Dental Care with Personalized Treatment at Nandini Hospital, Narwana
+      Personalized dental implant treatment for replacement of missing teeth.
     </p>
-  </section>
+  </div>
 
-  <section class="container">
-    <h2>Our Dental Treatments</h2>
+  <div class="card">
+    <h3>Root Canal Treatment</h3>
+    <p>
+      Professional root canal treatment focused on preserving natural teeth.
+    </p>
+  </div>
 
-    <div class="cards">
+  <div class="card">
+    <h3>Crowns & Bridges</h3>
+    <p>
+      Restorative solutions to improve dental function and appearance.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Dental Implants</h3>
-        <p>Personalized dental implant treatment for replacement of missing teeth.</p>
-      </div>
+  <div class="card">
+    <h3>Cosmetic Dentistry</h3>
+    <p>
+      Personalized cosmetic dental procedures for smile enhancement.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Root Canal Treatment</h3>
-        <p>Professional root canal treatment focused on preserving natural teeth.</p>
-      </div>
+  <div class="card">
+    <h3>Teeth Whitening</h3>
+    <p>
+      Cosmetic whitening treatment to help improve the brightness of your smile.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Crowns & Bridges</h3>
-        <p>Restorative solutions to improve dental function and appearance.</p>
-      </div>
+  <div class="card">
+    <h3>Tooth Extraction</h3>
+    <p>
+      Safe and individualized tooth extraction following dental examination.
+    </p>
+  </div>
 
-      <div class="card">
-        <h3>Cosmetic Dentistry</h3>
-        <p>Personalized cosmetic dental procedures for smile enhancement.</p>
-      </div>
-
-      <div class="card">
-        <h3>Teeth Whitening</h3>
-        <p>Cosmetic whitening treatment to help improve the brightness of your smile.</p>
-      </div>
-
-      <div class="card">
-        <h3>Tooth Extraction</h3>
-        <p>Safe and individualized tooth extraction following dental examination.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="container">
-
-    <h2>Our Dental Specialist</h2>
-
-    <div class="doctor">
-
-      <img src="newdoctor2.jpg"
-           alt="Dr. Hiteshi Kundu - Dental Surgeon & Implantologist">
-
-      <h2>Dr. Hiteshi Kundu</h2>
-
-      <h3>Dental Surgeon & Implantologist</h3>
-
-      <p>
-        BDS | P GDIMP (Implantology)
-      </p>
-
-      <p>
-        Dr. Hiteshi Kundu provides personalized dental care with a focus on
-        dental implants, restorative dentistry, cosmetic dentistry and
-        comprehensive oral care.
-      </p>
-
-    </div>
+</div>
+```
 
   </section>
+
+  <!-- DENTAL SPECIALIST -->
 
   <section class="container">
 
-    <h2>International Patient Assistance</h2>
+```
+<h2>Our Dental Specialist</h2>
 
-    <div class="cards">
+<div class="doctor">
 
-      <div class="card">
-        <h3>Online Consultation</h3>
-        <p>
-          International patients can contact our hospital for initial
-          treatment discussion and guidance.
-        </p>
-      </div>
+  <!-- DOCTOR PHOTO -->
+  <img src="newdoctor2.jpg"
+       alt="Dr. Hiteshi Kundu - Dental Surgeon & Implantologist">
 
-      <div class="card">
-        <h3>Treatment Planning</h3>
-        <p>
-          Treatment plans are prepared according to the patient's dental
-          condition and clinical requirements.
-        </p>
-      </div>
+  <!-- DOCTOR NAME -->
+  <h2>Dr. Hiteshi Kundu</h2>
 
-      <div class="card">
-        <h3>Travel Assistance</h3>
-        <p>
-          Guidance can be provided to international patients regarding
-          hospital visits and local arrangements.
-        </p>
-      </div>
+  <!-- DESIGNATION -->
+  <h3>Dental Surgeon & Implantologist</h3>
 
-    </div>
+  <!-- QUALIFICATION -->
+  <p>
+    <strong>BDS | P GDIMP (Implantology)</strong>
+  </p>
+
+  <!-- ABOUT DOCTOR -->
+  <p>
+    Dr. Hiteshi Kundu provides personalized dental care with a focus on
+    dental implants, restorative dentistry, cosmetic dentistry and
+    comprehensive oral care.
+  </p>
+
+</div>
+```
 
   </section>
+
+  <!-- INTERNATIONAL PATIENT ASSISTANCE -->
+
+  <section class="container">
+
+```
+<h2>International Patient Assistance</h2>
+
+<div class="cards">
+
+  <div class="card">
+    <h3>Online Consultation</h3>
+    <p>
+      International patients can contact our hospital for initial
+      treatment discussion and guidance.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Treatment Planning</h3>
+    <p>
+      Treatment plans are prepared according to the patient's dental
+      condition and clinical requirements.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>Travel Assistance</h3>
+    <p>
+      Guidance can be provided to international patients regarding
+      hospital visits and local arrangements.
+    </p>
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- CONTACT -->
 
   <section class="cta">
 
-    <h2>Plan Your Dental Treatment in India</h2>
+```
+<h2>Plan Your Dental Treatment in India</h2>
 
-    <p>
-      Contact Nandini Hospital for dental treatment information and
-      international patient enquiries.
-    </p>
+<p>
+  Contact Nandini Hospital for dental treatment information and
+  international patient enquiries.
+</p>
 
-    <a class="button"
-       href="https://wa.me/919050019007?text=Hello%20Nandini%20Hospital%2C%20I%20am%20interested%20in%20dental%20treatment%20in%20India.">
-       WhatsApp Enquiry
-    </a>
+<a class="button"
+   href="https://wa.me/919050019007?text=Hello%20Nandini%20Hospital%2C%20I%20am%20interested%20in%20dental%20treatment%20in%20India.">
+   WhatsApp Enquiry
+</a>
 
-    <a class="button"
-       href="mailto:nandinihospitalnarwana@gmail.com">
-       Email Us
-    </a>
+<a class="button"
+   href="mailto:nandinihospitalnarwana@gmail.com">
+   Email Us
+</a>
+```
 
   </section>
 
+  <!-- FOOTER -->
+
   <footer>
 
-    <p><strong>Nandini Hospital</strong></p>
+```
+<p><strong>Nandini Hospital</strong></p>
 
-    <p>Chotu Ram Colony, Narwana, Haryana – 126116</p>
+<p>
+  Chotu Ram Colony, Narwana, Haryana – 126116
+</p>
 
-    <p>24/7 Emergency Services</p>
+<p>
+  24/7 Emergency Services
+</p>
 
-    <p>© Nandini Hospital</p>
+<p>
+  © Nandini Hospital
+</p>
+```
 
   </footer>
 
