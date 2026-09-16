@@ -306,6 +306,106 @@
 
   </section>
 
+  <div class="dental-appointment">
+  <h2>Dental Tourism Appointment</h2>
+  <p>Book a consultation with Nandini Hospital's Dental Team</p>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+
+    <label>Patient Full Name *</label>
+    <input type="text" name="patient_name" placeholder="Enter full name" required>
+
+    <label>Country *</label>
+    <input type="text" name="country" placeholder="Enter country" required>
+
+    <label>WhatsApp / Mobile Number *</label>
+    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+
+    <label>Email Address *</label>
+    <input type="email" name="email" placeholder="Enter email address" required>
+
+    <label>Preferred Appointment Date *</label>
+    <input type="date" name="appointment_date" required>
+
+    <label>Preferred Time</label>
+    <input type="time" name="appointment_time">
+
+    <label>Treatment Required *</label>
+    <select name="treatment" required>
+      <option value="">Select Treatment</option>
+      <option>Dental Consultation</option>
+      <option>Dental Implant</option>
+      <option>Root Canal Treatment</option>
+      <option>Dental Crown & Bridge</option>
+      <option>Tooth Extraction</option>
+      <option>Cosmetic Dentistry</option>
+      <option>Full Mouth Rehabilitation</option>
+      <option>Dentures</option>
+      <option>Teeth Whitening</option>
+      <option>Other</option>
+    </select>
+
+    <label>Previous Dental Reports / X-Ray</label>
+    <input type="file" name="dental_report"
+           accept=".jpg,.jpeg,.png,.pdf">
+
+    <label>Message / Treatment Requirement</label>
+    <textarea name="message" rows="5"
+      placeholder="Tell us about your dental problem or treatment requirement"></textarea>
+
+    <button type="submit">Request Appointment</button>
+
+  </form>
+</div>
+
+<style>
+.dental-appointment {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+  font-family: Arial, sans-serif;
+}
+
+.dental-appointment h2 {
+  margin-bottom: 8px;
+}
+
+.dental-appointment p {
+  margin-bottom: 25px;
+}
+
+.dental-appointment label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.dental-appointment input,
+.dental-appointment select,
+.dental-appointment textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.dental-appointment button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+</style>
+  
   <!-- FOOTER -->
 
   <footer>
