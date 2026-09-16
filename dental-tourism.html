@@ -308,30 +308,30 @@
 
   <div class="dental-appointment">
   <h2>Dental Tourism Appointment</h2>
-  <p>Book a consultation with Nandini Hospital's Dental Team</p>
+  <p>Book your dental consultation at Nandini Hospital</p>
 
-  <form action="#" method="post" enctype="multipart/form-data">
+  <form onsubmit="sendWhatsApp(event)">
 
     <label>Patient Full Name *</label>
-    <input type="text" name="patient_name" placeholder="Enter full name" required>
+    <input type="text" id="name" required>
 
     <label>Country *</label>
-    <input type="text" name="country" placeholder="Enter country" required>
+    <input type="text" id="country" required>
 
     <label>WhatsApp / Mobile Number *</label>
-    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
+    <input type="tel" id="phone" required>
 
     <label>Email Address *</label>
-    <input type="email" name="email" placeholder="Enter email address" required>
+    <input type="email" id="email" required>
 
     <label>Preferred Appointment Date *</label>
-    <input type="date" name="appointment_date" required>
+    <input type="date" id="date" required>
 
     <label>Preferred Time</label>
-    <input type="time" name="appointment_time">
+    <input type="time" id="time">
 
     <label>Treatment Required *</label>
-    <select name="treatment" required>
+    <select id="treatment" required>
       <option value="">Select Treatment</option>
       <option>Dental Consultation</option>
       <option>Dental Implant</option>
@@ -345,15 +345,11 @@
       <option>Other</option>
     </select>
 
-    <label>Previous Dental Reports / X-Ray</label>
-    <input type="file" name="dental_report"
-           accept=".jpg,.jpeg,.png,.pdf">
-
     <label>Message / Treatment Requirement</label>
-    <textarea name="message" rows="5"
-      placeholder="Tell us about your dental problem or treatment requirement"></textarea>
+    <textarea id="message" rows="4"
+      placeholder="Tell us about your dental problem"></textarea>
 
-    <button type="submit">Request Appointment</button>
+    <button type="submit">Request Appointment on WhatsApp</button>
 
   </form>
 </div>
@@ -363,24 +359,25 @@
   max-width: 650px;
   margin: 30px auto;
   padding: 30px;
-  border-radius: 15px;
-  background: #fff;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.10);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
   font-family: Arial, sans-serif;
 }
 
 .dental-appointment h2 {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
+  font-size: 28px;
 }
 
 .dental-appointment p {
   margin-bottom: 25px;
+  color: #666;
 }
 
 .dental-appointment label {
   display: block;
-  margin-top: 16px;
-  margin-bottom: 7px;
+  margin: 16px 0 7px;
   font-weight: 600;
 }
 
@@ -388,23 +385,71 @@
 .dental-appointment select,
 .dental-appointment textarea {
   width: 100%;
-  padding: 12px;
+  padding: 13px;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 9px;
   box-sizing: border-box;
+  font-size: 15px;
 }
 
 .dental-appointment button {
   width: 100%;
   margin-top: 25px;
-  padding: 14px;
+  padding: 15px;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 9px;
+  background: #25D366;
+  color: white;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dental-appointment button:hover {
+  opacity: 0.9;
 }
 </style>
+
+<script>
+function sendWhatsApp(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const country = document.getElementById("country").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value;
+  const date = document.getElementById("date").value;
+  const time = document.getElementById("time").value;
+  const treatment = document.getElementById("treatment").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappMessage =
+`*Dental Tourism Appointment Request*
+
+*Patient Name:* ${name}
+*Country:* ${country}
+*Mobile / WhatsApp:* ${phone}
+*Email:* ${email}
+*Preferred Date:* ${date}
+*Preferred Time:* ${time || "Not specified"}
+*Treatment Required:* ${treatment}
+
+*Patient Message:*
+${message || "No additional message"}
+
+*Nandini Hospital*
+Narwana, Haryana
+Dental Tourism Appointment`;
+
+  const whatsappNumber = "919050019007";
+
+  const url =
+    "https://wa.me/" + whatsappNumber +
+    "?text=" + encodeURIComponent(whatsappMessage);
+
+  window.open(url, "_blank");
+}
+</script>
   
   <!-- FOOTER -->
 
